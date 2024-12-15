@@ -8,3 +8,5 @@ INSERT INTO crypto_data (name, current_price, price_change_24h, price_change_7d,
             price_change_7d = EXCLUDED.price_change_7d,
             price_change_30d = EXCLUDED.price_change_30d,
             updated_at = EXCLUDED.updated_at 
+
+            

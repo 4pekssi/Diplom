@@ -1,98 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootstrap demo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"rel="stylesheet"/>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"rel="stylesheet"/>
-    <link href="./assats/css/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./assats/css/lightdark.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  </head>
 
-  <body>
-    <img class="global-main-img" src="./img/Mask group(1).png" alt="">
-      <div class="wrapper">
-          <header class="header">
-              <header class="header-top">
-                <div class="container-fluid">
-                   <div class="row">
-                      <div class="col-md-4 d-none d-sm-block">
-                          <img src="./img/Group 1.png" alt="Logo" />
-                      </div>
-                      <div class="col-md-4 col-6">
-                        <div class="col-12">
-                          <i class="fa-solid fa-magnifying-glass"></i>
-                        <input class="search" type="text" placeholder="Search"> 
-                        </div>
-                        <div class="ppp"></div>
-                      </div>
-                      <div class="col-md-4 col-6">
-                       <div class="d-flex justify-content-center">
-                              <div class="dropdown">
-                              <button class="btn  dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <a>Аккаунт</a>
-                              </button>
-                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Авторизоватся</a></li>
-                                <li><a class="dropdown-item" href="#">Войти</a></li>
-                                </a></li>
-                              </ul>y
-                    
-                            </div>
-                          <div class="btn-group me-2">
-                           <div class="dropdown">
-                             <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                               <a>EN</a>
-                             </button>
-                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                               <li><a class="dropdown-item" href="#">RU</a></li>
-                               <li><a class="dropdown-item" href="#">DE</a></li>
-                             </ul>
-                           </div>
-                          </div>
-                        </div>  <!-- d-flex justify-content-center -->
-                      </div>
-                   </div>
-                </div>
-              </header>
-          </header>
-        <main class="main"> 
-          <DIV class="mait-text">
-          <h2 class="main-text-1">Информация, которая движет рынок!</h2>
-          <img class ="main-img" src="./img/CryptoHab.png" alt="">
-          </DIV>
-          <label for="theme" class="theme">
-            <span></span>
-            <span class="theme__toggle-wrap">
-              <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
-              <span class="theme__fill"></span>
-              <span class="theme__icon">
-                <span class="theme__icon-part"></span>
-                <span class="theme__icon-part"></span>
-                <span class="theme__icon-part"></span>
-                <span class="theme__icon-part"></span>
-                <span class="theme__icon-part"></span>
-                <span class="theme__icon-part"></span>
-                <span class="theme__icon-part"></span>
-                <span class="theme__icon-part"></span>
-                <span class="theme__icon-part"></span>
-              </span>
-            </span>
-            <span></span>
-          </label>
-        </main>
-        
-        <footer class="footer">footer</footer>
-        
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./assats/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assats/css/dropdown.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+  <html>
+
   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/main.js"></script>
-  </body>
+  <nav class="main-menu">
+    <ul>
+      <li>
+        <a href="">
+          <img class="lolgo" src="./img/Group 1.png" alt="Logo" />
+          <span class="nav-text">
+            
+          </span>
+        </a>
+
+      </li>
+      <li class="has-subnav">
+        <a href="#">
+          <i class="fa fa-globe fa-2x"></i>
+          <span class="nav-text">
+            
+          </span>
+        </a>
+
+      </li>
+      <li class="has-subnav">
+        <a href="#">
+          <i class="fa fa-comments fa-2x"></i>
+          <span class="nav-text">
+            
+          </span>
+        </a>
+
+      </li>
+      <li class="has-subnav">
+        <a href="#">
+          <i class="fa fa-camera-retro fa-2x"></i>
+          <span class="nav-text">
+            
+          </span>
+        </a>
+
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-film fa-2x"></i>
+          <span class="nav-text">
+            
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-book fa-2x"></i>
+          <span class="nav-text">
+            
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-cogs fa-2x"></i>
+          <span class="nav-text">
+             
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-map-marker fa-2x"></i>
+          <span class="nav-text">
+            
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/skinkvi/Notes.git">
+          <i class="fa fa-info fa-2x"></i>
+          <span class="nav-text">
+            Документация по крипте 
+          </span>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="logout">
+      <li>
+        <a href="#">
+          <i class="fa fa-power-off fa-2x"></i>
+          <span class="nav-text">
+            
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+<div class="onu"><!--этот див был создан для того что бы отделить выползающее меню с лева от всего остально с права -->
+
+<img class="global-main-img" src="./img/Mask group(1).png" alt="">
+  <div class="wrapper">
+    <header class="header">
+      <header class="header-top">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4 d-none d-sm-block">
+              
+            </div>
+            <div class="col-md-4 col-6">
+              <div class="col-12">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input class="search" type="text" placeholder="Search">
+              </div>
+              <div class="ppp"></div>
+            </div>
+            <div class="col-md-4 col-6">
+              <div class="d-flex justify-content-center">
+
+                <body id="bd">
+                  <div class="content">
+                    <i class="fas fa-sun"></i>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="tooglenight" class="cbx hidden" />
+                    <label for="tooglenight" class="switch"></label>
+                    &nbsp;&nbsp;&nbsp;
+                    <i class="fas fa-moon"></i>
+                  </div>
+                </body>
+
+              </div> <!-- d-flex justify-content-center -->
+            </div>
+          </div>
+        </div>
+      </header>
+    </header>
+    <main class="main">
+      <DIV class="mait-text">
+        <h2 class="main-text-1">Информация, которая движет рынок!</h2>
+        <img class="main-img" src="./img/CryptoHab.png" alt="">
+      </DIV>
+
+    </main>
+
+
+    
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
 </html>
