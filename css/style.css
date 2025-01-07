@@ -7,12 +7,12 @@ body {
     font-family: 'Roboto', sans-serif;
     position: absolute;
     width: 100%;
+
 }
+
 html, body {
     height: 100%;
 }
-
-
 
 .wrapper {
     min-height: 100%;
@@ -32,11 +32,13 @@ main.main {
 
 a{
     text-decoration: underline;
+  
 }
 
 a:hover{
     text-decoration: none;
 }
+
 img{
     max-width: 100%;
     height: auto;
@@ -120,40 +122,8 @@ img{
 }
 
 
-/* ========================= Main rules (Основные правила =========================== */
+/* ========================= Main rules (Основные правила) =========================== */
 
 
 
-/* ========================= Main rules (Основные правила =========================== */
-/* .container-md {
-    margin-top: 70px;
-}
-
-.form-control {
-    margin-bottom: 10px;
-}
-
-.btn-primary {
-    width: 100%;
-}
-.btn {
-    background-color: transparent;
-    border: none;
-}
-
-.no-border {
-    border: none;
-    outline: none;
-    box-shadow: none;
-}
-
-.no-border:focus {
-    border: none;
-    outline: none;
-    box-shadow: none;
-}
-
-.custom-btn {
-    background-color: transparent;
-    border: none;
-} */
+/* ========================= Main rules (Основные правила) =========================== */

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/log.css">
+  <link rel="stylesheet" href="/css/adaptiv.css">
+</head>
+<body>
+
+<div class="login-reg-panel">
+  <div class="login-info-box">
+    <h2>У вас есть аккаунт?</h2>
+    <label id="label-register" for="log-reg-show">Войти</label>
+    <input type="radio" name="active-log-panel" id="log-reg-show" checked="checked">
+  </div>
+
+  <div class="register-info-box">
+    <h2>У вас нет аккаунта?</h2>
+    <label id="label-login" for="log-login-show">Регистрация</label>
+    <input type="radio" name="active-log-panel" id="log-login-show">
+  </div>
+
+  <div class="white-panel">
+    <div class="login-show">
+      <h2>Войти</h2>
+      <input type="text" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <input type="button" value="Войти">
+      <a href="">Забыли пароль?</a>
+    </div>
+    <div class="register-show">
+      <h2>Зарегистрироватся</h2>
+      <input type="text" placeholder="Login">
+      <input type="text" placeholder="Email">
+      <input type="password" placeholder="Password" id="password">
+      <input type="password" placeholder="Confirm Password" id="confirm_password">
+	  <label id="toggle_password">Показать пароль</label>
+      <input type="button" value="Регистрация">
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/reg.js"></script>
+</body>
+</html>
