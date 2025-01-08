@@ -35,10 +35,24 @@ $(function() {
 
   // Валидация формы с использованием модуля security
   $.validate({
-      modules : 'security',
+    modules: 'security', // подключаем модуль, который даёт возможность проверить strength
       errorMessageClass: 'form__error',
       validationErrorMsgAttribute: 'data-error'
   });
+
+  // $.formUtils.addValidator({
+  //   name: 'super_strong_password',
+
+  //   validatorFunction: function(value, $el, config, language, $form) {
+  //     if (value.length < 8 || value.length > 25) return false;
+  //     if (!/[A-Z]/.test(value)) return false;
+  //     if (!/[a-z]/.test(value)) return false;
+  //     if (!/\d/.test(value))   return false;
+  //     if (!/[!@#$%^&*]/.test(value)) return false;
+  //     return true;
+  //   },
+  //   errorMessage: 'Must be 8-25 chars, with upper, lower, digit, special char!'
+  // });
 
   // Определение кастомного валидатора для проверки email или логина
   $.formUtils.addValidator({
@@ -46,33 +60,53 @@ $(function() {
     validatorFunction: function(value, $el, config, language, $form) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Шаблон для проверки e-mail
       const loginRegex = /^[a-zA-Z0-9]{3,20}$/; // Шаблон для логина
-
-      if (emailRegex.test(value)) {
-        return true; // Валидно как email
-      }
-      if (loginRegex.test(value)) {
-        return true; // Валидно как логин
-      }
-      return false; // Не валидно ни под email, ни под логин
+      return (emailRegex.test(value) || loginRegex.test(value));
     },
     errorMessage: 'Please enter a valid email or a 3-20 letters/numbers login.'
   });
 
-  // Обработчик клика по кнопке скрытия/показа пароля
-  $(document).ready(function() {
-      $('.pass-hide').on('click', function() {
-        const pass1 = $('#register-password');
-        const pass2 = $('#register-password-check');
+  // ---------------------------------------
+  //    Глаз для формы входа (#password)
+  // ---------------------------------------
 
-        if (pass1.attr('type') === 'password') {
-          pass1.attr('type', 'text'); // Показываем пароль
-          pass2.attr('type', 'text'); // Показываем подтверждение пароля
-          $(this).removeClass('fa-eye').addClass('fa-eye-slash'); // Меняем иконку на видимую форму пароля
-        } else {
-          pass1.attr('type', 'password'); // Скрываем пароль
-          pass2.attr('type', 'password'); // Скрываем подтверждение пароля
-          $(this).removeClass('fa-eye-slash').addClass('fa-eye'); // Меняем иконку на скрытую форму пароля
-        }
-      });
+  $('.pass-hide-login').on('click', function() {
+    // Находим поле пароля для входа
+    const passField = $('#password');
+
+    if (passField.attr('type') === 'password') {
+      // Если скрыто -> показываем
+      passField.attr('type', 'text');
+      // Меняем иконку
+      $(this).removeClass('fa-eye').addClass('fa-eye-slash');
+    } else {
+      // Если показано[thinking] -> скрываем
+      passField.attr('type', 'password');
+      // Меняем иконку обратно
+      $(this).removeClass('fa-eye-slash').addClass('fa-eye');
+    }
   });
+
+  // ---------------------------------------
+  //     Глаз для регистрации (2 поля)
+  // ---------------------------------------
+  $('.pass-hide-register').on('click', function() {
+    // Находим оба поля в регистрации
+    const pass1 = $('#register-password');
+    const pass2 = $('#register-password-check');
+
+    if (pass1.attr('type') === 'password') {
+      // Если скрыты -> показываем
+      pass1.attr('type', 'text');
+      pass2.attr('type', 'text');
+      // Меняем иконку
+      $(this).removeClass('fa-eye').addClass('fa-eye-slash');
+    } else {
+      // Иначе -> скрываем
+      pass1.attr('type', 'password');
+      pass2.attr('type', 'password');
+      // Меняем иконку обратно
+      $(this).removeClass('fa-eye-slash').addClass('fa-eye');
+    }
+  });
+
 });

@@ -37,7 +37,7 @@
       </ul>
 
       <!-- Форма для входа -->
-      <form class="form panel__login-form" id="login-form" method="" action="/index.html">
+      <form class="form panel__login-form" id="login-form" method="post" action="/register">
 
         <!-- Иконки социальных сетей -->
         <div class="rs_icons">
@@ -59,7 +59,7 @@
           class="form__input"
           name="login-mail"
           data-validation="email_or_login"        
-          data-validation-error-msg="Invalid email or login (3-20 chars)."
+          data-validation-error-msg="Invalid email or login (3-25 chars)."
           required
           >
           <span class="form__bar"></span>
@@ -77,11 +77,13 @@
           data-validation="length"
           data-validation-length="8-25" 
           data-error="Password must contain 8-25 characters." 
+          data-validation="length strength" 
+          maxlength="25"
           required
           >
           <span class="form__bar"></span>
           <label for="password" class="form__label">Password</label>
-          <i class="pass-hide fas fa-eye"></i>
+          <i class="pass-hide-login fas fa-eye"></i>
           <span class="form__error"></span>
         </div>
 
@@ -104,7 +106,8 @@
             name="register-login"
             data-validation="length"
             data-validation-length="3-20"
-            data-error="Login must be 3-20 characters."
+            data-error="Login must be 3-25 characters."
+            maxlength="25"
             required
           >
           <span class="form__bar"></span>
@@ -138,11 +141,13 @@
           data-validation="length" 
           data-validation-length="8-25" 
           data-error="Password must contain 8-25 characters"
+          data-validation="length strength" 
+          maxlength="25"
           required
           >
           <span class="form__bar"></span>
           <label for="register-password" class="form__label">Password </label>
-          <i class="pass-hide fas fa-eye"></i>
+          <i class="pass-hide-register fas fa-eye"></i>
           <span class="form__error"></span>
         </div>
 
@@ -156,6 +161,8 @@
           data-validation="confirmation" 
           data-validation-confirm="register-pass"
           data-error="Your passwords did not match." 
+          data-validation="length strength" 
+          maxlength="25"
           required
           >
           <span class="form__bar"></span>
